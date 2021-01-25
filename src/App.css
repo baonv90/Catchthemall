@@ -1,0 +1,46 @@
+.App {
+  align-items: center;
+  display: flex;
+  padding: 50px;
+  flex-direction: column;
+}
+
+img {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 250px;
+}
+
+div#target {
+  border: solid 1px #cccccc;
+  font-size: 16px;
+  line-height: 26px;
+  height: 100px;
+  overflow-y: scroll;
+  padding: 12px;
+  width: 300px;
+}
+
+.marker {
+  position: absolute;
+  pointer-events: none;
+  background: transparent;
+  border-bottom: 2px solid #0f22c3;
+}
+
+p {
+  color: #000000;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 10px 0;
+}
+p.caption {
+  color: #666666;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+pre {
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
