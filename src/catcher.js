@@ -12,19 +12,20 @@ document.addEventListener('DOMContentLoaded', (evt) => {
   // End of implementation
 });
 
+// Array to store the top position of the markers
 let markersTop = [];
 
 // Handle the input events
 const handleInput = (evt) => {
   const textarea = evt.target;
-  const matches = getHighlightedContent(textarea.innerText);
-
-  const node = textarea.childNodes[0];
-  let range = document.createRange();
   const overlay = document.getElementById('overlay');
-
+  const matches = getHighlightedContent(textarea.innerText);
   overlay.innerHTML = '';
   markersTop = [];
+  // handle only the inline-text node
+  const node = textarea.childNodes[0];
+  let range = document.createRange();
+
   if (matches.length) {
     matches.forEach((match) => {
       range.setStart(node, match);
